@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L. Jacobs</title>
+  <style>
+    :root {
+      --bg: #ffffff; 
+      /* #f7f6f1 */
+      --ink: #151515;
+      --muted: #696760;
+      --line: #d7d2c8;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    body {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .site {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      padding: 26px 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 7vw, 92px);
+      font-weight: 400;
+      line-height: .92;
+      letter-spacing: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+      padding-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 46%);
+      gap: 48px;
+      align-items: end;
+      padding: 42px 0 54px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro-text {
+      max-width: 560px;
+    }
+
+    .kicker {
+      margin: 0 0 64px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .statement {
+      margin: 0;
+      font-size: clamp(28px, 4.5vw, 58px);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .cover {
+      margin: 0;
+    }
+
+    .cover img {
+      width: 100%;
+      border: 1px solid var(--line);
+    }
+
+    .caption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 32px;
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      max-width: 720px;
+    }
+
+    .release {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 600px);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .release img {
+      border: 1px solid var(--line);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .shows {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      max-width: 860px;
+      border-top: 1px solid rgba(21, 21, 21, .18);
+    }
+
+    .shows li {
+      display: grid;
+      grid-template-columns: 88px minmax(150px, 240px) minmax(0, 1fr);
+      gap: 18px;
+      align-items: baseline;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(21, 21, 21, .1);
+    }
+
+    .shows li:first-child {
+      padding-top: 0;
+    }
+
+    .date {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .venue {
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .place {
+      color: var(--muted);
+    }
+
+    @media (max-width: 760px) {
+      .site {
+        width: min(100% - 22px, var(--max));
+      }
+
+      header,
+      .intro,
+      section,
+      .release {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      .intro {
+        gap: 28px;
+        padding-top: 28px;
+      }
+
+      .kicker {
+        margin-bottom: 36px;
+      }
+
+      .shows li {
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 6px 12px;
+      }
+
+      .place {
+        grid-column: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <h1>L. Jacobs</h1>
+      <nav aria-label="Site versions and sections">
+        <a href="#music">music</a>
+        <a href="#shows">shows</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="intro">
+
+        <figure class="cover">
+          <img src="assets/behind-the-great-curve.jpg" alt=" cover of Behind The Great Curve">
+          <img src="assets/L.JACOBS_BACK_SQUARE.jpg" alt="Back cover of Behind The Great Curve">
+        </figure>
+      </div>
+
+      <section id="music">
+        <h2>Music</h2>
+        <div class="release">
+          <img src="assets/behind-the-great-curve.jpg" alt="Front cover of Behind The Great Curve">
+          <div>
+            <p><b>Behind The Great Curve</b><br>LP incl. booklet / CD / Digital</p>
+            <p>blickwinkel 24 / 10 April 2026</p>
+            <div class="links">
+              <a href="https://blickwinkel.bandcamp.com/album/behind-the-great-curve" target="_blank" rel="noreferrer">Bandcamp</a>
+              <a href="https://blickwinkel.be/L-Jacobs-Behind-The-Great-Curve">blickwinkel</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shows">
+        <h2>Shows</h2>
+        <ul class="shows">
+          <li>
+            <span class="date">03/09/26</span>
+            <span class="venue"><a href="https://www.meakusma-festival.be/" target="_blank" rel="noreferrer">Meakusma Festival</a></span>
+            <span class="place">Eupen</span>
+          </li>
+          <li>
+            <span class="date">29/08/26</span>
+            <span class="venue"><a href="https://www.voetvolk.be/nl/rubirock-editie-2/" target="_blank" rel="noreferrer">Rubirock</a></span>
+            <span class="place">Rubigny (FR)</span>
+          </li>
+          <li>
+            <span class="date">03/08/26</span>
+            <span class="venue"><a href="https://theateraanzee.be/programma/1-1-3-late-night" target="_blank" rel="noreferrer">Theater Aan Zee</a></span>
+            <span class="place">Oostende</span>
+          </li>
+          <li>
+            <span class="date">11/06/26</span>
+            <span class="venue"><a href="https://www.viernulvier.gent/nl/agenda/blickwinkel-presents-l-jacobs-suzan-peeters-b856" target="_blank" rel="noreferrer">Palmarium</a></span>
+            <span class="place">Gent w/ Suzan Peeters</span>
+          </li>
+          <li>
+            <span class="date">24/05/26</span>
+            <span class="venue"><a href="https://www.instagram.com/p/DX8WhWgzQdr/" target="_blank" rel="noreferrer">SUBstore</a></span>
+            <span class="place">Tokyo (JP) w/ Hiroki Sugi, DJ: Kumari, Radio Jakarta</span>
+          </li>
+          <li>
+            <span class="date">23/05/26</span>
+            <span class="venue"><a href="https://kankyorecords.com/" target="_blank" rel="noreferrer">Kankyō Records at Shibuya PARCO</a></span>
+            <span class="place">Tokyo (JP)</span>
+          </li>
+          <li>
+            <span class="date">22/05/26</span>
+            <span class="venue"><a href="https://e-s-o.jp/schedule/dagdromme/" target="_blank" rel="noreferrer">ESŐ</a></span>
+            <span class="place">Kanazawa (JP) w/ Yukihito Kono, DJ: K3N, k*****, Yushin, Yuzuru</span>
+          </li>
+          <li>
+            <span class="date">18/05/26</span>
+            <span class="venue"><a href="https://spaceeauuu.themedia.jp/posts/58772185/" target="_blank" rel="noreferrer">Space Eauuu</a></span>
+            <span class="place">Kobe (JP) w/ Sawako &amp; Sumitomo Nomura</span>
+          </li>
+          <li>
+            <span class="date">17/05/26</span>
+            <span class="venue"><a href="https://tobirarecords.com/" target="_blank" rel="noreferrer">Tobira Records</a></span>
+            <span class="place">Kasai City (jP) w/ Dilian, Kim David Bots &amp; Lyckle De Jong, Kuthi Jin, Oldmold, ...</span>
+          </li>
+          <li>
+            <span class="date">15/05/26</span>
+            <span class="venue"><a href="https://givemelittlemore.blogspot.com/2026/04/2026515l-jacobs-japan-tour-2026.html" target="_blank" rel="noreferrer">Give me little more.</a></span>
+            <span class="place">Matsumoto (JP) w/ daborabo, 13un, DJ: Sakura Fantasma</span>
+          </li>
+          <li>
+            <span class="date">02/04/26</span>
+            <span class="venue"><a href="https://blikfabriek.be/event/club-cantin-roman-hiele-l-jacobs/" target="_blank" rel="noreferrer">Blikfabriek</a></span>
+            <span class="place">Hoboken w/ Hiele</span>
+          </li>
+          <li>
+            <span class="date">29/03/26</span>
+            <span class="venue"><a href="https://www.abconcerts.be/nl/agenda/sunday-morning-concert-l-jacobs/a10Qw00000GmeI5IAJ" target="_blank" rel="noreferrer">AB Salon</a></span>
+            <span class="place">Brussel</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Info and bookings: <a href="mailto:lennertjacobs@gmail.com">lennertjacobs@gmail.com</a></p>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
